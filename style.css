@@ -1,7 +1,7 @@
 /* source: https://github.com/wch/shiny-wordle/blob/main/app-final.R */
 
 #container{
-    border-style: double;
+    border-style: groove;
     border-color:#888;
     display: inline-block;
     margin: 1px;
@@ -75,3 +75,47 @@
 }
 
 
+.keyboard {
+    height: 240px;
+    user-select: none;
+}
+.keyboard .keyboard-row {
+    margin: 3px;
+}
+.keyboard .keyboard-row .key {
+    display: inline-block;
+    padding: 0;
+    margin: 3px;
+    width: 30px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 3px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: middle;
+    color: black;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ddd;
+    touch-action: none;
+}
+.keyboard .keyboard-row .key:focus {
+    outline: none;
+}
+.keyboard .keyboard-row .key.wide-key {
+    font-size: 15px;
+    width: 50px;
+}
+.keyboard .keyboard-row .key.correct {
+    background-color: #6a5;
+    color: white;
+}
+.keyboard .keyboard-row .key.in-word {
+    background-color: #db5;
+    color: white;
+}
+.keyboard .keyboard-row .key.not-in-word {
+    background-color: #888;
+    color: white;
+}
